@@ -1,9 +1,7 @@
-package com.greatlearning.week9.apicore.config;
+package com.greatlearning.week13.apicore.config;
 
-import com.greatlearning.week9.pojo.AuditLog;
-import com.greatlearning.week9.repository.AuditRepository;
+import com.greatlearning.week13.repository.AuditRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,6 +1,6 @@
-package com.greatlearning.week9.apicore.config;
+package com.greatlearning.week13.apicore.config;
 
-import com.greatlearning.week9.service.UserDetailsServiceImpl;
+import com.greatlearning.week13.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

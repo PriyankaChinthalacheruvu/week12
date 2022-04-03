@@ -1,6 +1,6 @@
-package com.greatlearning.week9.repository;
+package com.greatlearning.week13.repository;
 
-import com.greatlearning.week9.pojo.User;
+import com.greatlearning.week13.pojo.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

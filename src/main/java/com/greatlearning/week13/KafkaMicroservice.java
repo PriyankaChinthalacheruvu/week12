@@ -1,4 +1,4 @@
-package com.greatlearning.week9;
+package com.greatlearning.week13;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,11 +6,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 
 @SpringBootApplication
 @EnableWebSecurity
-public class AdminMicroservice {
+public class KafkaMicroservice {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(AdminMicroservice.class, args);
+		SpringApplication.run(KafkaMicroservice.class, args);
 	}
 
 }

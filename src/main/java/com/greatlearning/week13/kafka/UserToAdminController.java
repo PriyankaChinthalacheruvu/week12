@@ -1,27 +1,27 @@
-package com.greatlearning.week9.kafka;
+package com.greatlearning.week13.kafka;
 
-import com.greatlearning.week9.pojo.MessageTemplate;
+import com.greatlearning.week13.pojo.MessageTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserToUserController {
+public class UserToAdminController {
 
     private final UserProducer userProducer;
-
+    private final AdminProducer adminProducer;
 
     @Autowired
-    public UserToUserController(UserProducer userProducer){
+    public UserToAdminController(UserProducer userProducer, AdminProducer adminProducer){
         this.userProducer = userProducer;
+        this.adminProducer = adminProducer;
     }
 
 
-    @PostMapping("/usertouser")
+    @PostMapping("/publish/user")
     public void userMessageWindow(@RequestParam("message") String msg){
         MessageTemplate message = new MessageTemplate();
         message.setMessage(msg);
@@ -35,6 +35,18 @@ public class UserToUserController {
         this.userProducer.sendMessageToAnotherUser(message);
     }
 
+    @PostMapping("/publish/admin")
+    public void adminMessageWindow(@RequestParam("message") String msg){
+        MessageTemplate message = new MessageTemplate();
+        message.setMessage(msg);
+        message.setRole("ADMIN"); //already checked user role in WebSecurityConfig Class --can't reach here if not ADMIN
 
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentPrincipalName = authentication.getName(); //getting logged in username
+
+        message.setUsername(currentPrincipalName); //adding username in message box
+
+        this.userProducer.sendMessageToAnotherUser(message);
+    }
 
 }
