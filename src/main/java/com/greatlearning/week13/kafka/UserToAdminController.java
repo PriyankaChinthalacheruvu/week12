@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserToAdminController {
+public class UserToAdminController { //endpoint to handle USER_ADMIN Chat
 
     private final UserProducer userProducer;
     private final AdminProducer adminProducer;
@@ -21,7 +21,7 @@ public class UserToAdminController {
     }
 
 
-    @PostMapping("/publish/user")
+    @PostMapping("/publish/user") // endpoint for user to send message
     public void userMessageWindow(@RequestParam("message") String msg){
         MessageTemplate message = new MessageTemplate();
         message.setMessage(msg);
@@ -32,10 +32,10 @@ public class UserToAdminController {
 
         message.setUsername(currentPrincipalName); //adding username in message box
 
-        this.userProducer.sendMessageToAnotherUser(message);
+        this.userProducer.sendMessageToAdmin(message);
     }
 
-    @PostMapping("/publish/admin")
+    @PostMapping("/publish/admin") //endpoint for admin to send message
     public void adminMessageWindow(@RequestParam("message") String msg){
         MessageTemplate message = new MessageTemplate();
         message.setMessage(msg);

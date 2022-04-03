@@ -17,7 +17,7 @@ public class Swagger {
     @Bean
     public Docket SwaggerDocket(){
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(getApiInfo()).groupName("KAFKA Messaging API")
-                .select().apis(RequestHandlerSelectors.basePackage("com.greatlearning.week9"))
+                .select().apis(RequestHandlerSelectors.basePackage("com.greatlearning.week13"))
                 .build();
     }
 

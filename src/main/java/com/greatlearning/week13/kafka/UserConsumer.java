@@ -11,21 +11,21 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserConsumer {
 
-    @KafkaListener(topics="admin2user-chat",groupId = "group_id")
+    @KafkaListener(topics="admin2user-chat",groupId = "group_id") //custom listener for admin - user chat
     public void consumeUserToAdmin(ConsumerRecord<String, MessageTemplate> message)throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
 
         mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS,false);
-        String jsonString = mapper.writeValueAsString(message.value().toString());
+        String jsonString = mapper.writeValueAsString(message.value().toString()); //custom message json
         System.out.println(jsonString);
     }
 
-    @KafkaListener(topics="user2user-chat",groupId = "group_id")
+    @KafkaListener(topics="user2user-chat",groupId = "group_id") //custom listener for user - user chat
     public void consumeUserToUser(ConsumerRecord<String, MessageTemplate> message)throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
 
         mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS,false);
-        String jsonString = mapper.writeValueAsString(message.value().toString());
+        String jsonString = mapper.writeValueAsString(message.value().toString()); //custom message json reading
         System.out.println(jsonString);
     }
 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserToUserController {
+public class UserToUserController { // Endpoint to handle User-User chat window
 
     private final UserProducer userProducer;
 
@@ -20,7 +20,7 @@ public class UserToUserController {
     }
 
 
-    @PostMapping("/usertouser")
+    @PostMapping("/usertouser") //end point for user to ping chat in diff browsers/sessions
     public void userMessageWindow(@RequestParam("message") String msg){
         MessageTemplate message = new MessageTemplate();
         message.setMessage(msg);
