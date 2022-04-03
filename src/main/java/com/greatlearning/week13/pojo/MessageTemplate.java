@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MessageTemplate {
 
+
     @JsonProperty("role")
     private String role;
     @JsonProperty("username")

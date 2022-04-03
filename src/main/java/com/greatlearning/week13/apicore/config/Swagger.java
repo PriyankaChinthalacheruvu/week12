@@ -14,6 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class Swagger {
 
+
     @Bean
     public Docket SwaggerDocket(){
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(getApiInfo()).groupName("KAFKA Messaging API")
@@ -22,7 +23,7 @@ public class Swagger {
     }
 
     private ApiInfo getApiInfo(){
-        return new ApiInfoBuilder().title("GreatLearning Week 12/13 - KAFKA Messaging API")
+        return new ApiInfoBuilder().title("GreatLearning Week 13 - KAFKA Messaging API")
                 .description("API Documentation")
                 .license("Licensed to Stark Industries Pvt. Ltd.")
                 .build();

@@ -7,6 +7,7 @@
 - Spring AOP
 - HTTPS Secured - new Self-Signed Certificate Created
 
+
 # Logic Implemented
 - USER - ADMIN Chat : It has it's own Kafka-Topic which stores this chat
 - USER - USER Chat : This has a different Kafka-Topic which stores this chat
@@ -18,9 +19,9 @@
 
 ## --> Login
 - go to localhost:8080/login screen
-- Admin cred : username-aniruddha password-pass
-- User cred 1 : username-stark password-pass
-- User cred 2 : username-test5 password-pass
+- Admin cred : username-priyanka password-pass
+- User cred 1 : username-priyanka password-pass
+- User cred 2 : username-test password-pass
 
 ## --> Open Swagger
 - go to localhost:8080/swagger-ui.html

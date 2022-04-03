@@ -12,13 +12,6 @@ public class AuditConfig {
 
     private AuditRepository repo;
 
-//    @After("execution(public * com.greatlearning.week9.kafka.MessageController.*(..))")
-//    public void logBeforeExecutingControllerPublicMethods(JoinPoint joinPoint) {
-//        log.info("Triggered : {}", joinPoint.getSignature().getName());
-//        AuditLog audit=new AuditLog(joinPoint.getSignature().getName());
-//        //enable to save into audit table
-//        //repo.save(audit);
-//    }
 
 
 }

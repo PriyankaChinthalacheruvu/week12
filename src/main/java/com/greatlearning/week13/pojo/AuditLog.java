@@ -13,6 +13,7 @@ import java.util.Date;
 @Entity(name="auditlog")
 public class AuditLog {
 
+
     @Id
     @Column
     @GeneratedValue(strategy= GenerationType.IDENTITY)

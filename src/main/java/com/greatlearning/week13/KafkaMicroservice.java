@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @EnableWebSecurity
 public class KafkaMicroservice {
 
+
 	public static void main(String[] args) {
 
 		SpringApplication.run(KafkaMicroservice.class, args);

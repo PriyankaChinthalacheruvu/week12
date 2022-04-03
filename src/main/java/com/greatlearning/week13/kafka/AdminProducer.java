@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AdminProducer {
+
     public static final String TOPIC_1 ="admin2user-chat"; //special topic to handle only admin user chat
     @Autowired
     private KafkaTemplate<String, Object> kafkaTemplate; //custom object json

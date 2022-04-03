@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserProducer {
+
     public static final String TOPIC_1 ="admin2user-chat"; //unique topic for admin-user chat
     public static final String TOPIC_2 ="user2user-chat";  //unique topic for user-user chat
     @Autowired

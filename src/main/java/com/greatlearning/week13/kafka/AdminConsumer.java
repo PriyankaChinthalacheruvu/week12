@@ -11,7 +11,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class AdminConsumer {
 
-    @KafkaListener(topics="admin2user-chat",groupId = "group_id") //special topic to handle user - admin chat
+
+    @KafkaListener(topics="admin2user-chat",groupId = "group_id") // admin chat
     public void consume(ConsumerRecord<String, MessageTemplate> message)throws JsonProcessingException { //using Consumer Record to read message value
         ObjectMapper mapper = new ObjectMapper();
 

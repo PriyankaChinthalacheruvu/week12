@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserToUserController { // Endpoint to handle User-User chat window
+public class UserToUserController {
+
+    // Endpoint to handle User-User chat window
 
     private final UserProducer userProducer;
 

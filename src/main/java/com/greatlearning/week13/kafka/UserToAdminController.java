@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserToAdminController { //endpoint to handle USER_ADMIN Chat
+public class UserToAdminController {
+
+    //endpoint to handle USER_ADMIN Chat
 
     private final UserProducer userProducer;
     private final AdminProducer adminProducer;
